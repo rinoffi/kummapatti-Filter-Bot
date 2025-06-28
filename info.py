@@ -26,13 +26,13 @@ TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
-PICS = (environ.get('PICS', 'https://telegra.ph/file/0ed351c8605c23e8cae79.jpg https://telegra.ph/file/6524270c008b60f81f30a.jpg https://telegra.ph/file/848ed57090fd5111ce64d.jpg https://telegra.ph/file/5fe959d96fcc33d1b9dc9.jpg https://telegra.ph/file/ec5f5a031b7826e28360c.jpg https://telegra.ph/file/aa4b77441bb41cfce12d7.jpg https://telegra.ph/file/00ed60e2c89d564d850ef.jpg https://telegra.ph/file/a5d518f6020976bc45264.jpg https://telegra.ph/file/650191ad1f813ca8f41cb.jpg https://telegra.ph/file/c6042704a1bc0a2b52996.jpg https://telegra.ph/file/9d68211fa9dcb208200be.jpg')).split()
-WELCOME_VID = environ.get("WELCOME_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
+PICS = (environ.get('PICS', 'https://i.ibb.co/v4Mx2tdX/file-1266.jpg')).split()
+WELCOME_VID = environ.get("WELCOME_VID", "https://envs.sh/4mu.mp4")
 
 #premium imag
 REFFER_PIC = environ.get('REFFER_PIC', 'https://graph.org/file/f75feb19aece0d4badefd.jpg')
 PREMIUM_PIC = environ.get('SUBSCRIPTION', 'https://i.imghippo.com/files/wPdPK1726559453.jpg')
-QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/8bc2cc53e47180bc78c10.jpg') # Scanner Code image 
+QR_CODE = environ.get('QR_CODE', 'https://i.ibb.co/27xBy1r0/file-908.jpg') # Scanner Code image 
 #refer time, or feffer count
 REFERAL_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds | already seted 1 month premium
 REFFER_POINT = int(environ.get('USER_POINT', "50")) # Set Referel point Count 
@@ -40,8 +40,8 @@ REFFER_POINT = int(environ.get('USER_POINT', "50")) # Set Referel point Count
 premium = environ.get('PREMIUM_LOGS', '-1002690503523')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 # lock file, set file limit 
-FILE_LIMITE = int(environ.get('FILE_LIMITE', 15))
-SEND_ALL_LIMITE = int(environ.get('SEND_ALL_LIMITE', 3))
+FILE_LIMITE = int(environ.get('FILE_LIMITE', 20))
+SEND_ALL_LIMITE = int(environ.get('SEND_ALL_LIMITE', 5))
 LIMIT_MODE = is_enabled((environ.get('LIMIT_MODE', 'True')), False)
 
 # Admins, Channels & Users
@@ -49,7 +49,7 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Thizz_zoro") # widout 👉 @
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002583830624').split()]
 # post channel auto post new movie
-POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002583830624').split(','))))
+POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002883076778').split(','))))
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002883076778'))
 AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002883076778'))
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
@@ -60,23 +60,23 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 
 #stream link shortner
-STREAM_SITE = (environ.get('STREAM_SITE', 'sharedisklinks.com'))
-STREAM_API = (environ.get('STREAM_API', '587f94f0e0b1813a52aed61290af6ea79d6ee464'))
-STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Hoe/69'))
-STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
+STREAM_SITE = (environ.get('STREAM_SITE', 'gplinks.com'))
+STREAM_API = (environ.get('STREAM_API', '99b81ac9880b318b51a2a291c2fc68d4e719ccf6'))
+STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Bombardiro_Crocodiloa'))
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
 
 
 #verify site api and url
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
 VERIFY_URL = environ.get('VERIFY_URL', 'gplinks.com')
 VERIFY_API = (environ.get('VERIFY_API', '99b81ac9880b318b51a2a291c2fc68d4e719ccf6'))
 
-TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "600"))
+TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "21600"))
 VERIFY_URL2 = environ.get('VERIFY_URL2', 'gplinks.com')
 VERIFY_API2 = (environ.get('VERIFY_API2', '99b81ac9880b318b51a2a291c2fc68d4e719ccf6'))
  
-THIRD_VERIFY_GAP = int(environ.get('THIRD_VERIFY_GAP', "600"))
+THIRD_VERIFY_GAP = int(environ.get('THIRD_VERIFY_GAP', "21600"))
 VERIFY_URL3 = environ.get('VERIFY_URL3', 'gplinks.com')
 VERIFY_API3 = (environ.get('VERIFY_API3', '99b81ac9880b318b51a2a291c2fc68d4e719ccf6'))
  
@@ -94,11 +94,11 @@ PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviesandsrriesseries')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+Jo13VAOePDQ4NzJl')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002853893090))
-GROUP_VERIFY_LOGS = int(environ.get('GROUP_VERIFY_LOGS', -1002583830624)) # Group verify stats 
-REQ_CHANNEL = int(environ.get('REQ_CHANNEL', -1002883076778)) # movies request channel, else log channel
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Jhwjwp')
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002647011471))
+GROUP_VERIFY_LOGS = int(environ.get('GROUP_VERIFY_LOGS', -1002853893090)) # Group verify stats 
+REQ_CHANNEL = int(environ.get('REQ_CHANNEL', -1002583830624)) # movies request channel, else log channel
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/sparker_acx')
+IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 PM_FILTER = is_enabled((environ.get('PM_FILTER', "True")), False)
@@ -154,4 +154,3 @@ LOG_STR += ("Long IMDB storyline enabled." if LONG_IMDB_DESCRIPTION else "LONG_I
 LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies if movie not found\n" if SPELL_CHECK_REPLY else "SPELL_CHECK_REPLY Mode disabled\n")
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
-
