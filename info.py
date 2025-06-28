@@ -18,7 +18,7 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', "24160099"))
+API_ID = int(os.environ.get('API_ID', "24160099"))
 API_HASH = environ.get('API_HASH', "381515f2540b0bf817a68af8b352f5b7")
 BOT_TOKEN = environ.get('BOT_TOKEN', "8102454504:AAFUqaQ28ySh9tKHTtzvTs2H1jaK_cOprNE")
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
@@ -91,7 +91,80 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/up')
+GRP_LNK = environ.get('GRP_LNK'SESSION = environ.get('SESSION', 'Media_search')
+API_ID = int(environ.get('API_ID', "24160099"))
+API_HASH = environ.get('API_HASH', "381515f2540b0bf817a68af8b352f5b7")
+BOT_TOKEN = environ.get('BOT_TOKEN', "8102454504:AAFUqaQ28ySh9tKHTtzvTs2H1jaK_cOprNE")
+TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
+
+# Bot settings
+CACHE_TIME = int(environ.get('CACHE_TIME', 300))
+USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
+PICS = (environ.get('PICS', 'https://telegra.ph/file/0ed351c8605c23e8cae79.jpg https://telegra.ph/file/6524270c008b60f81f30a.jpg https://telegra.ph/file/848ed57090fd5111ce64d.jpg https://telegra.ph/file/5fe959d96fcc33d1b9dc9.jpg https://telegra.ph/file/ec5f5a031b7826e28360c.jpg https://telegra.ph/file/aa4b77441bb41cfce12d7.jpg https://telegra.ph/file/00ed60e2c89d564d850ef.jpg https://telegra.ph/file/a5d518f6020976bc45264.jpg https://telegra.ph/file/650191ad1f813ca8f41cb.jpg https://telegra.ph/file/c6042704a1bc0a2b52996.jpg https://telegra.ph/file/9d68211fa9dcb208200be.jpg')).split()
+WELCOME_VID = environ.get("WELCOME_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
+
+#premium imag
+REFFER_PIC = environ.get('REFFER_PIC', 'https://graph.org/file/f75feb19aece0d4badefd.jpg')
+PREMIUM_PIC = environ.get('SUBSCRIPTION', 'https://i.imghippo.com/files/wPdPK1726559453.jpg')
+QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/8bc2cc53e47180bc78c10.jpg') # Scanner Code image 
+#refer time, or feffer count
+REFERAL_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds | already seted 1 month premium
+REFFER_POINT = int(environ.get('USER_POINT', "50")) # Set Referel point Count 
+#premium Users Satuts
+premium = environ.get('PREMIUM_LOGS', '-1002690503523')
+PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
+# lock file, set file limit 
+FILE_LIMITE = int(environ.get('FILE_LIMITE', 15))
+SEND_ALL_LIMITE = int(environ.get('SEND_ALL_LIMITE', 3))
+LIMIT_MODE = is_enabled((environ.get('LIMIT_MODE', 'True')), False)
+
+# Admins, Channels & Users
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6248675084').split()]
+OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Thizz_zoro") # widout 👉 @
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002583830624').split()]
+# post channel auto post new movie
+POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002583830624').split(','))))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002883076778'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002883076778'))
+NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
+
+# MongoDB information
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://haribotx:haribotx@cluster0.i3skil4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
+
+#stream link shortner
+STREAM_SITE = (environ.get('STREAM_SITE', 'sharedisklinks.com'))
+STREAM_API = (environ.get('STREAM_API', '587f94f0e0b1813a52aed61290af6ea79d6ee464'))
+STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Hoe/69'))
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
+
+
+#verify site api and url
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
+VERIFY_URL = environ.get('VERIFY_URL', 'gplinks.com')
+VERIFY_API = (environ.get('VERIFY_API', '99b81ac9880b318b51a2a291c2fc68d4e719ccf6'))
+
+TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "600"))
+VERIFY_URL2 = environ.get('VERIFY_URL2', 'gplinks.com')
+VERIFY_API2 = (environ.get('VERIFY_API2', '99b81ac9880b318b51a2a291c2fc68d4e719ccf6'))
+ 
+THIRD_VERIFY_GAP = int(environ.get('THIRD_VERIFY_GAP', "600"))
+VERIFY_URL3 = environ.get('VERIFY_URL3', 'gplinks.com')
+VERIFY_API3 = (environ.get('VERIFY_API3', '99b81ac9880b318b51a2a291c2fc68d4e719ccf6'))
+ 
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/+fuhw3bZ97NgxMzE1')
+TUTORIAL2 = environ.get('TUTORIAL2', 'https://t.me/+fuhw3bZ97NgxMzE1')
+TUTORIAL3 = environ.get('TUTORIAL3', 'https://t.me/+fuhw3bZ97NgxMzE1')
+
+# auto files delete
+AUTO_FILE_DELETE = is_enabled((environ.get('AUTO_FILE_DELETE', "True")), False)
+
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002883076778').split()]
+MAX_B_TN = environ.get("MAX_B_TN", "7")
+MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
+, 'https://t.me/up')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Safaribotts')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001433302422))
