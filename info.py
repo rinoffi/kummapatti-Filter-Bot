@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(os.environ.get('API_ID', "24160099"))
 API_HASH = environ.get('API_HASH', "381515f2540b0bf817a68af8b352f5b7")
-BOT_TOKEN = environ.get('BOT_TOKEN', "7542357714:AAE-g52vvJnBFg_Sak2Bn6D7wtgbmSJDOhw")
+BOT_TOKEN = environ.get('BOT_TOKEN', "8372224140:AAGaUksyBN7IdtR03IhqaoUqkR6MBWbbM2g")
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 
 # Bot settings
@@ -32,7 +32,7 @@ WELCOME_VID = environ.get("WELCOME_VID", "https://envs.sh/4mu.mp4")
 #premium imag
 REFFER_PIC = environ.get('REFFER_PIC', 'https://graph.org/file/f75feb19aece0d4badefd.jpg')
 PREMIUM_PIC = environ.get('SUBSCRIPTION', 'https://i.imghippo.com/files/wPdPK1726559453.jpg')
-QR_CODE = environ.get('QR_CODE', 'https://i.ibb.co/27xBy1r0/file-908.jpg') # Scanner Code image 
+QR_CODE = environ.get('QR_CODE', 'https://files.catbox.moe/bwuqsi.jpg') # Scanner Code image 
 #refer time, or feffer count
 REFERAL_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds | already seted 1 month premium
 REFFER_POINT = int(environ.get('USER_POINT', "50")) # Set Referel point Count 
@@ -45,13 +45,13 @@ SEND_ALL_LIMITE = int(environ.get('SEND_ALL_LIMITE', 5))
 LIMIT_MODE = is_enabled((environ.get('LIMIT_MODE', 'True')), False)
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6248675084').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7189632039').split()]
 OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Thizz_zoro") # widout 👉 @
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002583830624').split()]
 # post channel auto post new movie
 POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002883076778').split(','))))
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002883076778'))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002883076778'))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002694700188'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002694700188'))
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
@@ -62,7 +62,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 #stream link shortner
 STREAM_SITE = (environ.get('STREAM_SITE', 'gplinks.com'))
 STREAM_API = (environ.get('STREAM_API', '99b81ac9880b318b51a2a291c2fc68d4e719ccf6'))
-STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Bombardiro_Crocodiloa'))
+STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/+fuhw3bZ97NgxMzE1'))
 STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
 
 
@@ -92,12 +92,12 @@ MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviesandsrriesseries')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+Jo13VAOePDQ4NzJl')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Manga_x_Cruise')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002647011471))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002853893090))
 GROUP_VERIFY_LOGS = int(environ.get('GROUP_VERIFY_LOGS', -1002853893090)) # Group verify stats 
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL', -1002583830624)) # movies request channel, else log channel
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/sparker_acx')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+05Spz1LxHw80N2Jl')
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
